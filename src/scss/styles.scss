@@ -17,7 +17,10 @@
 */
 :root {
   --main-font: "Times New Roman", Times, serif;
+  --title-font: Tahoma, Verdana, Geneva, sans-serif;
   --main-grey: #8c8c8c;
+  --main-black: #000000;
+  --link-active: #9b130c;
 }
 
 /* 
@@ -41,7 +44,6 @@ body {
   padding: 0;
   font-family: --main-font;
   font-size: 14px;
-  color: var(--main-grey);
 }
 
 header,
@@ -52,6 +54,35 @@ nav {
 
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: var(--main-black);
+}
+
+p {
+  line-height: 1.5;
+  color: var(--main-grey);
+  margin: 0 0 15px;
+}
+
+h1,
+h3 {
+  font-family: var(--title-font);
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+h3 {
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* 
@@ -63,4 +94,50 @@ a {
   padding: 0 15px;
   max-width: 840px;
   margin: 0 auto;
+}
+
+/* 
+    5.Header
+   ========================================================================== 
+*/
+.header-main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.header-main__logo {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.header-main__navigation {
+  font-family: var(--title-font);
+  font-size: 1.14rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  a {
+    display: block;
+    margin-bottom: 10px;
+
+    &:hover,
+    &:active {
+      color: var(--link-active);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header-main {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-main__navigation a {
+    display: inline-block;
+    margin-left: 30px;
+  }
 }
