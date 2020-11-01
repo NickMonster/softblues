@@ -1,1 +1,1 @@
-html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0;padding:0}
+:root{--main-font:"Times New Roman",Times,serif;--main-grey:#8c8c8c}*,:after,:before{box-sizing:border-box}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0;padding:0;font-family:--main-font;font-size:14px;color:var(--main-grey)}header,main,nav{display:block}a{background-color:transparent}.container{width:100%;padding:0 15px;max-width:840px;margin:0 auto}

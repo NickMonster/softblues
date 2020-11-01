@@ -1,7 +1,35 @@
+/* ------------------------------------------------------------------------------------
+[Table of contents]
+
+1.Variables
+2.Normalize
+3.Common styles
+4.Buttons
+5.Header
+6.Main navigation
+7.Content
+
+-------------------------------------------------------------------------------------- */
+
 /* 
-    1. Normalize styles
+    1. Variables
    ========================================================================== 
 */
+:root {
+  --main-font: "Times New Roman", Times, serif;
+  --main-grey: #8c8c8c;
+}
+
+/* 
+    2. Normalize
+   ========================================================================== 
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
 html {
   line-height: 1.15; /* 1 */
@@ -11,4 +39,28 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: --main-font;
+  font-size: 14px;
+  color: var(--main-grey);
+}
+
+header,
+main,
+nav {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+/* 
+    3.Common styles
+   ========================================================================== 
+*/
+.container {
+  width: 100%;
+  padding: 0 15px;
+  max-width: 840px;
+  margin: 0 auto;
 }
