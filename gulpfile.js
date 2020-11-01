@@ -54,7 +54,7 @@ function watch() {
     },
   });
   gulp.watch("./src/scss/**/*.scss", styles);
-  gulp.watch("./src/images/**/*", gulp.series(clean, img, html));
+  gulp.watch("./src/images/**/*", gulp.series(clean, img, html, styles));
   gulp
     .watch("src/**/*.html", gulp.series(html))
     .on("change", browserSync.reload);
