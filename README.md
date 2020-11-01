@@ -1,2 +1,2 @@
-# softblues
+# Softblues
 Test task
