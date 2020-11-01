@@ -10,7 +10,7 @@ const fileinclude = require("gulp-file-include");
 function img() {
   return gulp
     .src("./src/images/**/**.*")
-    .pipe(gulp.dest("./www/images/"))
+    .pipe(gulp.dest("./docs/images/"))
     .pipe(browserSync.stream());
 }
 
@@ -22,12 +22,12 @@ function styles() {
     )
     .pipe(sass().on("error", sass.logError))
     .pipe(cssmin())
-    .pipe(gulp.dest("./www/css/"))
+    .pipe(gulp.dest("./docs/css/"))
     .pipe(browserSync.stream());
 }
 
 function clean(done) {
-  del.sync(["www/**"]);
+  del.sync(["docs/**"]);
   done();
 }
 
@@ -43,14 +43,14 @@ function html() {
         basepath: "@file",
       })
     )
-    .pipe(gulp.dest("./www/"))
+    .pipe(gulp.dest("./docs/"))
     .pipe(browserSync.stream());
 }
 
 function watch() {
   browserSync.init({
     server: {
-      baseDir: "./www/",
+      baseDir: "./docs/",
     },
   });
   gulp.watch("./src/scss/**/*.scss", styles);
