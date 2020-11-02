@@ -180,7 +180,7 @@ ul {
     right: 4px;
     cursor: pointer;
     opacity: 0;
-    z-index: 2;
+    z-index: 100;
     -webkit-touch-callout: none;
 
     &:checked {
